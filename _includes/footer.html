@@ -1,28 +1,45 @@
-<footer class="py-2 bg-light">
+<footer class="site-footer bg-light">
   <div class="container">
-    <div class="m-0 text-center">
-      <img src="https://loremflickr.com/150/40" class="img-fluid" alt="Logo"/>
-    </div>
-    <p class="m-0 mb-30 text-center">Copyright &copy; {{ site.time | date: '%Y' }}</p>
-    <div class="row text-center">
-      <div class="col-sm">
-        <nav class="nav flex-column">
-          <a class="nav-link text-dark" href="#">Home</a>
-          <a class="nav-link text-dark" href="#">About Us</a>
-          <a class="nav-link text-dark" href="#">Contact Us</a>
-        </nav>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>About</h6>
+        <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus libero deleniti nobis consequatur nam cupiditate consequuntur eligendi! Illo magnam, cupiditate pariatur odio at itaque! Nostrum itaque sit atque sunt magnam.</p>
       </div>
-      <div class="col-sm">
-        <nav class="nav flex-column">
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Products</h6>
+        <ul class="footer-links">
           <a class="nav-link text-dark" href="#">Machines</a>
           <a class="nav-link text-dark" href="#">Hand Tools</a>
-        </nav>
+        </ul>
       </div>
-      <div class="col-sm">
-        <nav class="nav flex-column">
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <a class="nav-link text-dark" href="#">About Us</a>
+          <a class="nav-link text-dark" href="#">Contact Us</a>
           <a class="nav-link text-dark" href="#">Videos</a>
           <a class="nav-link text-dark" href="#">Download Brochures</a>
-        </nav>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; {{ site.time | date: '%Y' }} All Rights Reserved by 
+     <a href="/">Ajmera Enterprises</a>.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
       </div>
     </div>
   </div>
