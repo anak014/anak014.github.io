@@ -1,3 +1,9 @@
+---
+layout: default
+title: About Us - Ajmera Industries
+permalink: /about/
+---
+
 ### History
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus libero deleniti nobis consequatur nam cupiditate consequuntur eligendi! Illo magnam, cupiditate pariatur odio at itaque! Nostrum itaque sit atque sunt magnam.
 
