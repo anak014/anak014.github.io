@@ -7,9 +7,13 @@
 }
 
 .caption-img {
-  opacity: 0.6; 
+  opacity: 0.6;
 }
 
 .dropdown-item {
   font-size: 80%;
+}
+
+.cover-img {
+  height: 400px;
 }

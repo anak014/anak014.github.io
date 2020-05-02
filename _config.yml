@@ -1,5 +1,14 @@
-title: Ajmera Enterprises
+title: Madhya Pradesh Steel Industry
 permalink: pretty
 sass:
   sass_dir: css
-  style:    compressed
+  style: compressed
+defaults:
+  - scope:
+      path: "assets/brochures/machines"
+    values:
+      machine: true
+  - scope:
+      path: "assets/brochures/hand-tools"
+    values:
+      handtool: true

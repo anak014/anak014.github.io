@@ -4,20 +4,42 @@
   <body>
     <div class="container">
       {% include navbar.html %}
-      <hr />
-      <h1 class="mt-2 mb-3 text-center font-weight-lighter">
+      <h1 class="mt-2 mb-4 text-center font-weight-lighter">
         {{ page.title }}
       </h1>
       <div class="row">
         {% for product in page.products %}
-        <div class="col-md-4 mb-2">
-          <h4 class="font-weight-light text-center">{{ product.title }}</h4>
-          <img
-            src="{{ product.image }}"
-            alt="Product Image"
-            class="w-100 img-fluid"
-          />
-          <p class="text-justify">{{ product.description }}</p>
+        <div class="col-md-4 mb-3">
+          <h5 class="font-weight-light text-center">{{ product.title }}</h5>
+          <div
+            id="carouselExampleSlidesOnly"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              {% for image in product.images %}
+              <div
+                class="carousel-item {% if forloop.index == 1 %}active{% endif %}"
+              >
+                <img
+                  src="{{ image }}"
+                  class="d-block w-100 img-fluid shadow-sm"
+                />
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <table class="table table-striped mt-2">
+            <caption>
+              {{ product.description }}
+            </caption>
+            {% for detail in product.details %}
+            <tr>
+              <th>{{ detail[0] }}</th>
+              <td>{{ detail[1] }}</td>
+            </tr>
+            {% endfor %}
+          </table>
         </div>
         {% endfor %}
       </div>
