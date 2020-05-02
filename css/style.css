@@ -1,3 +1,11 @@
 #navbarSupportedContent {
   font-size: 85%;
 }
+
+.carousel-item {
+  background: black;
+}
+
+.caption-img {
+  opacity: 0.6; 
+}
