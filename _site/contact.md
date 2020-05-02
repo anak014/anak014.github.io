@@ -1,2 +1,1 @@
-## Mail us
-asdfasdf@test.com
+# Contact Us

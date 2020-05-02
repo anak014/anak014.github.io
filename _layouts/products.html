@@ -4,7 +4,23 @@
   <body>
     <div class="container">
       {% include navbar.html %}
-      <h1 class="mt-2 text-center">{{ page.title }}</h1>
+      <hr />
+      <h1 class="mt-2 mb-3 text-center font-weight-lighter">
+        {{ page.title }}
+      </h1>
+      <div class="row">
+        {% for product in page.products %}
+        <div class="col-md-4 mb-2">
+          <h4 class="font-weight-light text-center">{{ product.title }}</h4>
+          <img
+            src="{{ product.image }}"
+            alt="Product Image"
+            class="w-100 img-fluid"
+          />
+          <p class="text-justify">{{ product.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
     </div>
     {% include footer.html %}
     <script
