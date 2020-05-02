@@ -9,3 +9,7 @@
 .caption-img {
   opacity: 0.6; 
 }
+
+.dropdown-item {
+  font-size: 85%;
+}
