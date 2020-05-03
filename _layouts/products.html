@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include header.html %}
-  <body>
-    <div class="container">
-      {% include navbar.html %}
-      <h1 class="mt-2 mb-4 text-center font-weight-light">
+  <body class="bg-light">
+    {% include navbar.html %}
+    <div class="container shadow bg-white p-4 my-4 rounded">
+      <h1 class="mt-2 mb-1 text-center font-weight-lighter">
         {{ page.title }}
       </h1>
-      <div class="row">
+      <hr class="divider mb-4" />
+      <div class="row justify-content-center">
         {% for product in page.products %}
         <div class="col-md-4 mb-3">
           <div class="p-3 card shadow-sm h-100 product-card">

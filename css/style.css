@@ -54,3 +54,33 @@ td.product-cell {
 .product-card {
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.03s;
 }
+
+.navbar {
+  box-shadow: 0 4px 6px -5px gray;
+}
+
+.site-footer {
+  background-color: rgb(35, 93, 152);
+  color: whitesmoke;
+}
+
+.site-footer a {
+  color: lightblue;
+}
+
+.client-img {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.client-name {
+  font-size: 75%;
+}
+
+.divider {
+  width: 70px;
+  background-color: rgb(35, 93, 152);
+  height: 1.5px;
+  border-radius: 20%;
+  margin-top: 0px;
+}

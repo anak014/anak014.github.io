@@ -12,3 +12,7 @@ defaults:
       path: "assets/brochures/hand-tools"
     values:
       handtool: true
+  - scope:
+      path: "assets/clients"
+    values:
+      client: true
