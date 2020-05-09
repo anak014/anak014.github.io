@@ -80,6 +80,13 @@ td.product-cell {
 .client-img {
   max-height: 80px;
   object-fit: contain;
+  justify-content: normal;
+}
+
+.client-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .client-name {
