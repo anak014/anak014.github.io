@@ -57,7 +57,7 @@ td.product-cell {
 .product-card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
-  transform: scale(1.02, 1.02);
+  transform: scale(1.01, 1.01);
 }
 
 .product-card {
@@ -91,6 +91,15 @@ td.product-cell {
 
 .client-name {
   font-size: 75%;
+}
+
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .divider {

@@ -20,15 +20,12 @@
               class="carousel slide"
               data-ride="carousel"
             >
-              <div class="carousel-inner">
+              <div class="carousel-inner product-img parent">
                 {% for image in product.images %}
                 <div
-                  class="carousel-item {% if forloop.index == 1 %}active{% endif %}"
+                  class="carousel-item {% if forloop.index == 1 %}active{% endif %} child"
                 >
-                  <img
-                    src="{{ image }}"
-                    class="d-block w-100 img-fluid shadow-sm product-img"
-                  />
+                  <img src="{{ image }}" class="d-block w-100 img-fluid" />
                 </div>
                 {% endfor %}
               </div>
