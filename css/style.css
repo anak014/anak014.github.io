@@ -19,8 +19,8 @@
 }
 
 .product-img {
-  min-height: 400px;
-  max-height: 400px;
+  min-height: 350px;
+  max-height: 350px;
 }
 
 .site-title {
@@ -52,12 +52,15 @@ td.product-cell {
 
 .product-title {
   color: rgb(35, 93, 152);
+  line-height: 1.2em;
+  height: 2.4em; /* height is 2x line-height, so two lines will display */
+  overflow: hidden; /* prevents extra lines from being visible */
 }
 
 .product-card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
-  transform: scale(1.01, 1.01);
+  transform: scale(1.002, 1.002);
 }
 
 .product-card {
