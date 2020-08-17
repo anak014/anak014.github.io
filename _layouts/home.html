@@ -4,38 +4,47 @@
   <body class="bg-light">
     {% include navbar.html %}
     <div class="container shadow-sm bg-white p-4 my-4 rounded">
-      <div
-        id="carouselExampleSlidesOnly"
-        class="carousel slide mb-4"
-        data-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              class="d-block w-100"
-              src="assets/images/home/banner.png"
-              alt="First slide"
-            />
-          </div>
-        </div>
+      <div class="mx-auto w-100">
+        <map name="bannermap">
+          <area
+            alt="Machine 1"
+            title="Machine 1"
+            href="#"
+            coords="580,20,865,220"
+            shape="rect"
+            data-toggle="tooltip"
+            data-html="true"
+            title="<h1>Machine 1</h1>"
+          />
+          <area
+            alt="Machine 2"
+            title="Machine 2"
+            href="#"
+            coords="280,230,590,600"
+            shape="rect"
+            data-toggle="tooltip"
+            data-html="true"
+            title="<h1>Machine 1</h1>"
+          />
+          <area
+            alt="Machine 3"
+            title="Machine 3"
+            href="#"
+            coords="865,40,1200,300"
+            shape="rect"
+            data-toggle="tooltip"
+            data-html="true"
+            title="<h1>Machine 1</h1>"
+          />
+        </map>
       </div>
+      <img
+        class="d-block w-100"
+        src="assets/images/home/banner.png"
+        usemap="#bannermap"
+      />
       {{ content }}
     </div>
     {% include footer.html %}
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
