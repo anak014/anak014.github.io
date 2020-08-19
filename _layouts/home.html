@@ -4,45 +4,51 @@
   <body class="bg-light">
     {% include navbar.html %}
     <div class="container shadow-sm bg-white p-4 my-4 rounded">
-      <div class="mx-auto w-100">
-        <map name="bannermap">
-          <area
-            alt="Machine 1"
-            title="Machine 1"
-            href="#"
-            coords="580,20,865,220"
-            shape="rect"
-            data-toggle="tooltip"
-            data-html="true"
-            title="<h1>Machine 1</h1>"
-          />
-          <area
-            alt="Machine 2"
-            title="Machine 2"
-            href="#"
-            coords="280,230,590,600"
-            shape="rect"
-            data-toggle="tooltip"
-            data-html="true"
-            title="<h1>Machine 1</h1>"
-          />
-          <area
-            alt="Machine 3"
-            title="Machine 3"
-            href="#"
-            coords="865,40,1200,300"
-            shape="rect"
-            data-toggle="tooltip"
-            data-html="true"
-            title="<h1>Machine 1</h1>"
-          />
-        </map>
-      </div>
       <img
         class="d-block w-100"
         src="assets/images/home/banner.png"
         usemap="#bannermap"
       />
+      <div class="w-100">
+        <map name="bannermap" id="bannermap">
+          <area
+            alt="Machine 1"
+            title="<b>Machine 1</b>"
+            href="#"
+            coords="580,20,865,220"
+            shape="rect"
+            data-toggle="popover"
+            data-trigger="focus"
+            data-content="Some <b>random</b> description of the machine"
+            data-placement="bottom"
+            data-html="true"
+          />
+          <area
+            alt="Machine 2"
+            title="<b>Machine 2</b>"
+            href="#"
+            coords="280,230,590,600"
+            shape="rect"
+            data-toggle="popover"
+            data-trigger="focus"
+            data-content="Some <b>random</b> description of the machine"
+            data-placement="bottom"
+            data-html="true"
+          />
+          <area
+            alt="Machine 3"
+            title="<b>Machine 3</b>"
+            href="#"
+            coords="865,40,1200,300"
+            shape="rect"
+            data-toggle="popover"
+            data-trigger="focus"
+            data-content="Some <b>random</b> description of the machine"
+            data-placement="bottom"
+            data-html="true"
+          />
+        </map>
+      </div>
       {{ content }}
     </div>
     {% include footer.html %}

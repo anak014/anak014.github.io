@@ -31,6 +31,12 @@
   max-height: 350px;
 }
 
+#bannermap {
+  position: absolute;
+  height: 10px;
+  left: 50%;
+}
+
 .site-title {
   background-color: rgb(35, 93, 152);
   color: white;
