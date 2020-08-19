@@ -21,9 +21,7 @@
           </p>
           <p>
             E Mail:
-            <a href="mailto:mpsteelindustry@gmail.com"
-              >mpsteelindustry@gmail.com</a
-            >
+            <a href="mailto:{{site.email}}">{{site.email}}</a>
           </p>
         </div>
       </div>
@@ -76,5 +74,45 @@
 <script>
   $(function () {
     $('[data-toggle="popover"]').popover();
+  });
+
+  $("#productModal").on("show.bs.modal", function (event) {
+    var button = $(event.relatedTarget); // Button that triggered the modal
+    var description = button.data("desc");
+    var details = button.data("details");
+    var name = button.data("title");
+    var images = button.data("images");
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this);
+    modal.find(".modal-title").text(name);
+    modal.find(".modal-body .description").text(description);
+
+    const tableRowMapper = (key) =>
+      `<tr><td class="font-weight-light product-cell">${key}</td><td class="text-right product-cell">${details[key]}</td></tr>`;
+    let table = `<table class="table product-table mt-2"><caption>${description}</caption>${Object.keys(
+      details
+    )
+      .map(tableRowMapper)
+      .join("")}</table>`;
+
+    const imgMapper = (img, i) =>
+      `<div class="carousel-item ${
+        i === 0 ? "active" : ""
+      } child"><img src="${img}" class="d-block w-100 img-fluid" /></div>`;
+    const imageTag = `<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner product-img parent">
+                ${images.map(imgMapper).join("")}
+              </div>
+            </div>`;
+    modal.find(".modal-body .images").html(imageTag);
+    modal.find(".modal-body .description").html(table);
+    const requestQuote = ``;
+    modal.find(
+      ".modal-footer"
+    ).html(`<button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+    <a class="btn btn-success" href="mailto:{{site.email}}?subject=${encodeURI(
+      name
+    )}&body=Hi,%0D%0A Please provide us with a Quotation for ${encodeURI(name)}.%0D%0AOur Contact Details:%0D%0APhone No.: %0D%0A%0D%0A Thanks!">Request Quotation</a>`);
   });
 </script>
