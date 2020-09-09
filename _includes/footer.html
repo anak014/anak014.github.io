@@ -62,6 +62,11 @@
   crossorigin="anonymous"
 ></script>
 <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"
+  integrity="sha512-eZB7hQa0bRlrKMQ2njpP0d/Klu6o30Gsr8e5FUCjUT3fSlnVkm/1J14n58BuwgaMuObrGb7SvUfQuF8qFsPU4g=="
+  crossorigin="anonymous"
+></script>
+<script
   src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
   crossorigin="anonymous"
@@ -115,4 +120,6 @@
       name
     )}&body=Hi,%0D%0A Please provide us with a Quotation for ${encodeURI(name)}.%0D%0AOur Contact Details:%0D%0APhone No.: %0D%0A%0D%0A Thanks!">Request Quotation</a>`);
   });
+
+  $("img[usemap]").rwdImageMaps();
 </script>
