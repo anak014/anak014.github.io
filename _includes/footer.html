@@ -116,9 +116,16 @@
     modal.find(
       ".modal-footer"
     ).html(`<button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
-    <a class="btn btn-success" href="mailto:{{site.email}}?subject=${encodeURI(
+    <a class="btn btn-success" href="mailto:{{site.email}}?subject=Quotation%20for%20${encodeURI(
       name
-    )}&body=Hi,%0D%0A Please provide us with a Quotation for ${encodeURI(name)}.%0D%0AOur Contact Details:%0D%0APhone No.: %0D%0A%0D%0A Thanks!">Request Quotation</a>`);
+    )}&body=Hi,
+    %0D%0A%0D%0APlease provide us with a Quotation for ${encodeURI(name)}.
+    %0D%0A%0D%0AOur Contact Details:
+    %0D%0A%0D%0A Name: 
+    %0D%0A%0D%0A Address: 
+    %0D%0A%0D%0A Phone No.: 
+    %0D%0A%0D%0A Contact Email: 
+    %0D%0A%0D%0A Thanks!">Request Quotation</a>`);
   });
 
   $("img[usemap]").rwdImageMaps();
